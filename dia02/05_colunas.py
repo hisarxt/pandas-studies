@@ -22,6 +22,19 @@ renamed_columns={
 
 df = df.rename(columns=renamed_columns)
 # %%
-df
+df[["IdCliente", "qtPontos"]]
 
+# %%
+
+df[["IdCliente", "qtPontos"]].tail(5)
+# %%
+df[["IdCliente", "IdTransacao", "qtPontos"]].head(5)
+# %%
+
+colunas = df.columns.to_list()
+colunas.sort()
+colunas
+
+df = df[colunas]
+df
 # %%
